@@ -1,17 +1,15 @@
-import { applyMiddleware, compose, createStore } from "redux";
-import thunk from "redux-thunk";
-import { rootReducer } from "../state/ducks";
+import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import { appDefaultState, rootReducer } from '../state/ducks';
 
 const middleware = [thunk];
 const reducer = rootReducer;
 
 const getStore = () => {
-  const enhancer = compose(
-    applyMiddleware(...middleware)
-    // window.devToolsExtension ? window.devToolsExtension() : noop => noop
-  );
+  const enhancer = composeWithDevTools(applyMiddleware(...middleware));
 
-  const store = createStore(reducer, enhancer);
+  const store = createStore(reducer, appDefaultState, enhancer);
 
   return store;
 };
