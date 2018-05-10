@@ -1,3 +1,4 @@
+import { routerReducer } from 'react-router-redux';
 import { combineReducers } from 'redux';
 
 import commonReducer, {
@@ -15,5 +16,6 @@ export const appDefaultState: IAppState = {
 
 // DucksFeatureReducers Goes here:
 export const rootReducer = combineReducers({
-  common: commonReducer
+  common: commonReducer,
+  routing: routerReducer
 });
