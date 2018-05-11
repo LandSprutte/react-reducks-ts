@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Header from '../pages/router/Header';
-import MainRouter from '../pages/router/MainRouter';
+import Header from './shared/Header';
+import MainRouter from './shared/navigation/MainRouter';
 
 interface IAppContainterProps {
   title: string;
