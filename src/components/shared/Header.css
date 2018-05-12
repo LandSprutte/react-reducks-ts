@@ -1,0 +1,50 @@
+.header_container {
+  position: relative;
+  background-color: beige;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0px, auto, 0px, auto;
+  box-sizing: border-box;
+}
+
+.grid {
+  text-align: left;
+  font-family: 'NoSpace';
+}
+
+.size12of12 {
+  width: calc(100% * 12 / 12 - 0.01px);
+}
+
+.column {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div {
+  display: block;
+}
+
+nav {
+  position: relative;
+  clear: left;
+}
+
+li {
+  background-color: whitesmoke;
+  color: antiquewhite;
+}
+
+ul {
+  float: left;
+  position: relative;
+}
+
+.content_box_sizing {
+  box-sizing: content-box;
+}
